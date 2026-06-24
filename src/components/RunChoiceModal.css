@@ -1,0 +1,51 @@
+.run-choice-shell {
+  width: 480px;
+}
+
+.run-choice-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  background: var(--panel);
+  width: 100%;
+}
+
+.run-choice-option:hover {
+  border-color: var(--text-tertiary);
+  background: var(--border);
+}
+
+.run-choice-option + .run-choice-option {
+  margin-top: 10px;
+}
+
+.run-choice-option-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.run-choice-option-desc {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.run-choice-option-real {
+  border-color: var(--accent-border);
+  background: var(--accent-dim);
+}
+
+.run-choice-option-real:hover {
+  border-color: var(--accent);
+  background: rgba(25, 133, 161, 0.24);
+}
+
+.run-choice-option-real .run-choice-option-title {
+  color: var(--accent);
+}

@@ -1,0 +1,104 @@
+/* Agent-editor-specific tweaks layered on top of shared.css. */
+
+.agent-editor-footer {
+  justify-content: space-between;
+}
+
+.agent-editor-footer-right {
+  display: flex;
+  gap: 8px;
+}
+
+.overseer-task-info {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-dim);
+}
+
+.overseer-task-info-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.overseer-task-info-body {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.overseer-task-info-body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.system-prompt-section {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-top: 2px;
+}
+
+.system-prompt-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 2px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.system-prompt-toggle:hover {
+  color: var(--text-primary);
+}
+
+.system-prompt-toggle-chevron {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  width: 12px;
+  display: inline-block;
+}
+
+.system-prompt-set-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.system-prompt-body {
+  margin-top: 8px;
+}
+
+.system-prompt-textarea {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  font-size: 13px;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.system-prompt-textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.system-prompt-textarea::placeholder {
+  color: var(--text-tertiary);
+}

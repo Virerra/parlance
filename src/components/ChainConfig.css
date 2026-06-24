@@ -1,0 +1,56 @@
+.chain-config-shell {
+  width: 460px;
+}
+
+.chain-config-hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.chain-config-empty {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.chain-config-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chain-config-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--panel);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.chain-config-item:hover {
+  border-color: var(--slate);
+}
+
+.chain-config-item.is-selected {
+  border-color: var(--accent-border);
+  background: var(--accent-dim);
+}
+
+.chain-config-item-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.chain-config-item-date {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}

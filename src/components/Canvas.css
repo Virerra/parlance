@@ -1,0 +1,81 @@
+.canvas-wrap {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  background: var(--bg);
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  filter: brightness(1.4);
+}
+
+.react-flow__edge-path {
+  stroke-linecap: round;
+}
+
+.react-flow__edge-text {
+  fill: var(--text-tertiary);
+}
+
+.react-flow__edge-textbg {
+  fill: var(--bg);
+}
+
+/* Controls */
+.parlance-controls.react-flow__controls {
+  box-shadow: none;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+}
+
+.parlance-controls .react-flow__controls-button {
+  background: var(--panel-raised);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  width: 28px;
+  height: 28px;
+}
+
+.parlance-controls .react-flow__controls-button:hover {
+  background: var(--border);
+}
+
+.parlance-controls .react-flow__controls-button svg {
+  fill: var(--text-secondary);
+}
+
+/* Minimap */
+.parlance-minimap.react-flow__minimap {
+  background: var(--panel);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+/* React Flow applies a default outline/box-shadow to selected nodes that
+   doesn't match our visual language — suppress it everywhere. Our nodes
+   handle their own selected state via the .is-selected class instead. */
+.react-flow__node.selected {
+  outline: none;
+  box-shadow: none;
+}
+
+.react-flow__node:focus,
+.react-flow__node:focus-visible {
+  outline: none;
+}
+
+/* ReactFlow applies white background to custom node wrappers by default.
+   Override for special node types so they use transparent backgrounds
+   and let the component's own styling control appearance. */
+.react-flow__node-import,
+.react-flow__node-output,
+.react-flow__node-chain {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}

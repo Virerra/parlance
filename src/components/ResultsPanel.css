@@ -1,0 +1,102 @@
+.results-shell {
+  width: 520px;
+  max-height: 80vh;
+}
+
+.results-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+
+.results-overseer-note {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-dim);
+  margin-bottom: 18px;
+}
+
+.results-overseer-text {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+}
+
+.results-files-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.results-select-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.results-select-link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.results-select-link:hover {
+  text-decoration: underline;
+}
+
+.results-select-sep {
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+
+.results-agent-group {
+  margin-bottom: 14px;
+}
+
+.results-agent-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.results-file-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--panel);
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.results-file-row:hover {
+  border-color: var(--text-tertiary);
+}
+
+.results-file-row input[type='checkbox'] {
+  accent-color: var(--accent);
+}
+
+.results-file-path {
+  font-family: 'SF Mono', 'Menlo', monospace;
+  font-size: 12.5px;
+  color: var(--text-primary);
+}
+
+.results-no-files {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-style: italic;
+}

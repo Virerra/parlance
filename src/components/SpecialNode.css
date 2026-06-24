@@ -1,0 +1,337 @@
+/* Shared base for Import, Output, and Chain nodes.
+   Slate colour scheme (passive/structural) vs teal (active/agent). */
+
+.special-node {
+  background: var(--panel);
+  border: 1px solid var(--slate);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  min-width: 160px;
+  max-width: 220px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.12s ease;
+  position: relative;
+}
+
+.special-node.is-selected {
+  border-color: var(--accent);
+}
+
+/* Import: left accent stripe in slate */
+.import-node {
+  border-left: 3px solid var(--slate);
+  border-color: var(--border-strong);
+  border-left-color: var(--slate);
+}
+
+/* Output: top accent stripe in deep teal */
+.output-node {
+  border-top: 3px solid #1a7a6e;
+  border-color: var(--border-strong);
+  border-top-color: #1a7a6e;
+}
+
+/* Chain: dashed border in muted purple */
+.chain-node {
+  border-style: dashed;
+  border-color: #5B4E8A;
+}
+
+.chain-node.is-selected {
+  border-color: var(--accent);
+}
+
+/* Content state — slightly lighter bg when data is loaded */
+.special-node.has-content {
+  background: #202224;
+}
+
+.special-node-type-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  padding: 2px 6px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* Each node type gets its own badge color — complementary to the app's
+   teal/slate palette, distinct from each other and from the Overseer */
+.import-node .special-node-type-label {
+  background: var(--slate); /* #4C5C68 — passive input */
+}
+
+.output-node .special-node-type-label {
+  background: #1a7a6e; /* deep teal variant — completion */
+}
+
+.chain-node .special-node-type-label {
+  background: #5B4E8A; /* muted purple — cross-workspace */
+}
+
+.special-node-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-family: 'Playfair Display', serif;
+}
+
+.special-node-detail {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.special-node-filename,
+.special-node-workspace-name {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.special-node-summary {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.special-node-file-icon {
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.special-node-chain-arrow {
+  font-size: 13px;
+  color: var(--slate);
+  flex-shrink: 0;
+}
+
+.special-node-file-count {
+  font-size: 10.5px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  white-space: nowrap;
+}
+
+.special-node-empty {
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.special-node-upload-btn {
+  font-size: 11.5px;
+  color: var(--slate);
+  background: var(--border);
+  border: 1px dashed var(--slate);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 2px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+
+.special-node-upload-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-secondary);
+}
+
+.chain-node-change-btn {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+}
+
+.chain-node-change-btn:hover {
+  color: var(--slate);
+}
+
+.special-node-files-list {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.special-node-file-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  color: var(--text-secondary);
+}
+
+.chain-node-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.chain-node-toggle input[type="checkbox"] {
+  accent-color: #5B4E8A;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.chain-node-toggle-label {
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+
+.chain-node-log {
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: rgba(91, 78, 138, 0.1);
+  border: 1px solid rgba(91, 78, 138, 0.3);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.chain-node-log-entry {
+  font-size: 10px;
+  line-height: 1.3;
+  font-family: 'SF Mono', 'Menlo', monospace;
+}
+
+.chain-node-log-started { color: var(--text-tertiary); }
+.chain-node-log-completed { color: #1a7a6e; }
+.chain-node-log-failed { color: var(--status-failed); }
+
+/* Output node specific */
+.output-node-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.output-node-chain-badge {
+  font-size: 11px;
+  color: #5B4E8A;
+  opacity: 0.7;
+  title: "Chainable";
+}
+
+.output-node-preview {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-top: 4px;
+  font-style: italic;
+  word-break: break-word;
+}
+
+.output-node-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.output-node-action-btn {
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+  background: var(--border);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.output-node-action-btn:hover {
+  border-color: #1a7a6e;
+  color: #1a7a6e;
+}
+
+.output-node-timestamp {
+  font-size: 9.5px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* Chain node type label uses its own color defined above */
+
+.output-node-files {
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 6px;
+}
+
+.output-node-files-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+
+.output-node-file-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+.output-node-file-name {
+  font-size: 10.5px;
+  color: var(--text-secondary);
+  font-family: 'SF Mono', 'Menlo', monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.output-node-badges {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.output-node-chain-badge,
+.output-node-cache-badge {
+  display: flex;
+  align-items: center;
+  color: var(--text-tertiary);
+  opacity: 0.7;
+}
+
+.output-node-chain-badge {
+  color: #5B4E8A;
+  opacity: 1;
+}
+
+.output-node-cache-badge {
+  color: #1a7a6e;
+  opacity: 1;
+}

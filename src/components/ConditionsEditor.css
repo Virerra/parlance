@@ -1,0 +1,82 @@
+.conditions-help {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.conditions-textarea {
+  background: var(--panel);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 13.5px;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.conditions-textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.conditions-textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.file-context-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.file-context-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.file-context-option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  row-gap: 2px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--panel);
+  cursor: pointer;
+}
+
+.file-context-option:hover {
+  border-color: var(--text-tertiary);
+}
+
+.file-context-option.is-selected {
+  border-color: var(--accent-border);
+  background: var(--accent-dim);
+}
+
+.file-context-option input[type='radio'] {
+  grid-row: 1;
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+
+.file-context-option-label {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.file-context-option-desc {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}

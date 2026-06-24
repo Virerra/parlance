@@ -1,0 +1,104 @@
+.context-menu {
+  position: absolute;
+  z-index: 45;
+  background: var(--panel-raised);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 5px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.context-menu-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 5px 10px 3px;
+  pointer-events: none;
+}
+
+.context-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-align: left;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.context-menu-item:hover {
+  background: var(--border);
+}
+
+.context-menu-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  color: currentColor;
+}
+
+.context-menu-item:hover .context-menu-item-icon {
+  opacity: 0.9;
+}
+
+.context-menu-item.is-accent .context-menu-item-icon,
+.context-menu-item.is-danger .context-menu-item-icon {
+  opacity: 0.9;
+}
+
+.context-menu-item-label {
+  flex: 1;
+}
+
+.context-menu-item-hint {
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+/* Teal accent — for workflow/conditions actions */
+.context-menu-item.is-accent {
+  color: var(--accent);
+}
+.context-menu-item.is-accent:hover {
+  background: var(--accent-dim);
+}
+
+/* Danger — for delete actions */
+.context-menu-item.is-danger {
+  color: var(--status-failed);
+}
+.context-menu-item.is-danger:hover {
+  background: rgba(181, 83, 94, 0.12);
+}
+
+/* Disabled */
+.context-menu-item.is-disabled {
+  color: var(--text-tertiary);
+  cursor: default;
+}
+.context-menu-item.is-disabled:hover {
+  background: none;
+}
+
+.context-menu-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 2px;
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Surfaces */
+  --bg: #161718;
+  --panel: #1d1f21;
+  --panel-raised: #232527;
+  --canvas-dot: #232527;
+
+  /* Borders */
+  --border: #2c2e30;
+  --border-strong: #46494C;
+
+  /* Text */
+  --text-primary: #DCDCDD;
+  --text-secondary: #C5C3C6;
+  --text-tertiary: #8b8d90;
+
+  /* Brand */
+  --charcoal: #46494C;
+  --slate: #4C5C68;
+  --accent: #1985A1;
+  --accent-dim: rgba(25, 133, 161, 0.16);
+  --accent-border: rgba(25, 133, 161, 0.4);
+
+  /* Status (derived from accent/slate family only — no new hues) */
+  --status-pending: var(--text-tertiary);
+  --status-running: var(--accent);
+  --status-completed: var(--slate);
+  --status-failed: #b5535e;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

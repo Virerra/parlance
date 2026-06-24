@@ -1,0 +1,64 @@
+.settings-help {
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin-top: -2px;
+}
+
+.settings-key-row {
+  display: flex;
+  gap: 8px;
+}
+
+.settings-key-row input {
+  flex: 1;
+  font-family: 'SF Mono', 'Menlo', monospace;
+  letter-spacing: 0.01em;
+}
+
+.settings-reveal-btn {
+  flex-shrink: 0;
+  padding: 0 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.settings-reveal-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
+
+.settings-current {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.settings-current code {
+  font-family: 'SF Mono', 'Menlo', monospace;
+  color: var(--text-secondary);
+}
+
+.settings-cost-note {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+}
+
+.settings-cost-note strong {
+  color: var(--text-primary);
+}
+
+.settings-saved-tag {
+  font-size: 12px;
+  color: var(--status-completed);
+  font-weight: 500;
+  align-self: center;
+}
